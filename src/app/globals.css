@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.containers {
+  width: min(1350px, 100%);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+
+
+
+.slick-dots {
+  padding: 32px !important;
+  gap: 0.5rem !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.slick-dots li button:before {
+  color: #FFF !important;
+  opacity: 0.5;
+  font-size: 1.125rem !important;
+
+
+}
+
+.slick-dots li.slick-active button:before {
+  color: #DB4444 !important;
+}
