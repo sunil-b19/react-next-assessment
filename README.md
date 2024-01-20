@@ -19,7 +19,7 @@ This Next.js web app integrates with the [DummyJSON API](https://dummyjson.com/d
 1. Clone the repository:
 
    ```bash
-   git clone hhttps://github.com/sunil-b19/react-next-assessment
+   git clone https://github.com/sunil-b19/react-next-assessment
    cd react-next-assessment
 
 
