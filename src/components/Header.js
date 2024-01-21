@@ -16,6 +16,13 @@ const Header = () => {
     setDropdownOpen(!isDropdownOpen);
   };
 
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  console.log(isMobileMenuOpen)
   return (
     <header className='border-b-2'>
       {
@@ -24,7 +31,7 @@ const Header = () => {
             <div>
               <Link href="/" className='f text-[1.5rem] font-bold'>Exclusive</Link>
             </div>
-            <nav className='flex gap-[2rem] items-center'>
+            <nav className={`flex gap-[2rem] items-center mobile-nav-bar ${isMobileMenuOpen ? 'block' : 'hidden-menu'}`}>
               <Link href="/" className='text-[rem text-black] font-normal'>Home</Link>
               <Link href="/product" className='text-[rem text-black] font-normal'>Product</Link>
               <Link href="/contact" className='text-[rem text-black] font-normal'>Contact</Link>
@@ -32,7 +39,7 @@ const Header = () => {
               <Link href="/user/login" className='text-[rem text-black] font-normal'>Login</Link>
             </nav>
             <div className='flex gap-5 items-center'>
-              <div className="relative flex flex-1 flex-shrink-0">
+              <div className="relative flex-1 flex-shrink-0 sm:flex hidden">
                 <input
                   className="px-2 py-1 w-[min(300px)] outline-none"
                   placeholder="What are you looking for?"
@@ -44,6 +51,14 @@ const Header = () => {
               </div>
               <div>
                 <i className="fa-solid fa-cart-shopping text-[1.25rem] pt-2"></i>
+              </div>
+              <div className="hidden hamburger">
+                <button
+                  onClick={toggleMobileMenu}
+                  className="text-[1.5rem] focus:outline-none"
+                >
+                  &#9776; {/* Hamburger Icon */}
+                </button>
               </div>
             </div>
           </div>

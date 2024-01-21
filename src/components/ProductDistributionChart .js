@@ -19,15 +19,21 @@ const ProductDistributionChart = ({ data }) => {
       },
     ],
   };
+
   const chartOptions = {
     maintainAspectRatio: false, // Set to false to allow custom width and height
     responsive: true,
+    legend: {
+      display: true,
+      position: 'bottom',
+    },
   };
+
   return (
     <div className='mt-[3rem]' >
       <h2 className='text-[1.25rem] font-bold'>Product Distribution by Categories</h2>
-      <div className='w-[990px] h-[550px] mx-auto'>
-        <Pie data={chartData} options={chartOptions} />
+      <div className='xl:w-full lg:w-[75%] md:w-[50%] w-[40%] mx-auto'>
+        <Pie data={chartData} options={chartOptions} className='w-[100%]' />
       </div>
     </div >
   );

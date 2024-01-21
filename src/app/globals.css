@@ -33,3 +33,33 @@
 .slick-dots li.slick-active button:before {
   color: #DB4444 !important;
 }
+
+
+
+/* mobile navigation  */
+
+
+@media (max-width: 980px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  header>div>.mobile-nav-bar {
+    position: absolute;
+    top: 5.2rem;
+    left: 0;
+    background-color: #FFF;
+    width: 100%;
+    height: 50vh;
+    z-index: 999;
+    flex-direction: column;
+    padding-block: 2rem;
+  }
+
+  .hidden-menu {
+    display: none;
+  }
+}
+
+@media (max-width:580px) {}

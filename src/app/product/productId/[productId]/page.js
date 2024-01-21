@@ -79,7 +79,7 @@ const ProductDetails = ({ params: productId }) => {
               </div>
             ) : (
               <>
-                <div className='grid grid-cols-4 gap-9 '>
+                <div className='grid  gap-9 mb-9 ms:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
                   {
                     productCatagory && productCatagory?.products.map((productData) => {
                       return <div key={productData.id} className='h-[300px] relative group'>

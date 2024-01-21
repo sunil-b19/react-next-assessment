@@ -7,7 +7,7 @@ const page = () => {
   return (
     <main>
       <section>
-        <div className='containers flex items-center gap-5'>
+        <div className='containers flex flex-col-reverse items-center gap-5 md:flex-row'>
           <SliderNav />
           <Hero />
         </div>
